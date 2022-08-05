@@ -164,10 +164,34 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Assets\img\Body\bodybanner1.png" />
+    <Content Include="Assets\img\Body\bodybanner2.png" />
+    <Content Include="Assets\img\Body\bodybanner3.png" />
+    <Content Include="Assets\img\Body\bodyrightpic1.png" />
+    <Content Include="Assets\img\Body\bodyrightpic2.png" />
+    <Content Include="Assets\img\Body\bodyrightpic3.png" />
+    <Content Include="Assets\img\Body\bodyrightpic4.png" />
+    <Content Include="Assets\img\Body\bodyrightpic5.png" />
+    <Content Include="Assets\img\Body\bodyrightpic6.png" />
+    <Content Include="Assets\img\Body\bodyrightpic7.png" />
+    <Content Include="Assets\img\Footer\footer03.png" />
+    <Content Include="Assets\img\Footer\footer04.png" />
+    <Content Include="Assets\img\Footer\footerpic1.png" />
+    <Content Include="Assets\img\Footer\footerpic2.png" />
+    <Content Include="Assets\img\Header\Foto_icon.png" />
+    <Content Include="Assets\img\Header\level_icon.png" />
+    <Content Include="Assets\img\Header\Location_icon.png" />
+    <Content Include="Assets\img\Header\Secondary _ Calendar.png" />
+    <Content Include="Assets\img\Header\Secondary _ Notification.png" />
+    <Content Include="Assets\img\Header\Secondary _ Settings.png" />
+    <Content Include="Assets\img\Header\Sun cloud angled rain.png" />
+    <Content Include="Assets\img\Header\sun_header.png" />
+    <Content Include="Assets\img\Header\sun_icon.png" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\UV_Home_Page.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -192,6 +216,8 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include="Assets\img\Body\.DS_Store" />
+    <Content Include="Assets\img\Footer\.DS_Store" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

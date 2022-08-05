@@ -1,24 +1,100 @@
-﻿<div class="jumbotron">
+﻿<link href="~/Content/UV_Home_Page.css" rel="stylesheet" />
+<div class="jumbotron">
     <h1>ASP.NET</h1>
     <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
     <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
 </div>
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>ASP.NET Web API is a framework that makes it easy to build HTTP services that reach
-        a broad range of clients, including browsers and mobile devices. ASP.NET Web API
-        is an ideal platform for building RESTful applications on the .NET Framework.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301870">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301871">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301872">Learn more &raquo;</a></p>
-    </div>
+<div class="box">
+    <header>
+        <img class="logo" src="Assets/img/Header/sun_header.png" alt="">
+        <div class="leftSearchBox">
+            <span>UV Forecast</span>
+            <div class="SearchBox">
+                <input type="text" placeholder="Search for weather in city or suburb">
+                <input type="button" value="Go">
+            </div>
+
+        </div>
+        <div class="Forecast">
+            <img src="~/Assets/img/Header/Sun cloud angled rain.png" alt="">
+            <span>12<sup>o</sup></span>
+        </div>
+        <div class="Information">
+            <div class="Information_1">
+                <i>
+                    <img src="~/Assets/img/Header/sun_icon.png" alt="">
+                    <span>UV INDEX 4</span>
+                </i>
+                <i>
+                    <img src="~/Assets/img/Header/level_icon.png" alt="">
+                    <span>Level: <strong>High</strong></span>
+                </i>
+            </div>
+            <div class="Information_2">
+                <i>
+                    <img src="~/Assets/img/Header/Secondary _ Calendar.png" alt="">
+                    <span>03 Aug 2022</span>
+                </i>
+                <i>
+                    <img src="~/Assets/img/Header/Location_icon.png" alt="">
+                    <span>City, Mel, VIC</span>
+                </i>
+            </div>
+        </div>
+        <div class="rightBox">
+            <img src="~/Assets/img/Header/Secondary _ Settings.png" alt="">
+            <img src="~/Assets/img/Header/Secondary _ Notification.png" alt="">
+            <img src="~/Assets/img/Header/Foto_icon.png" alt="">
+        </div>
+    </header>
+    <section>
+        <div class="card">
+            <div class="leftStatisticBox">
+                <div class="uvStatisticTitle"> UV Statistic </div>
+                <img class="uvStatistic" src="~/Assets/img/Body/bodyrightpic6.png">
+                <img class="uvStatisticPie" src="~/Assets/img/Body/bodyrightpic5.png">
+                <p>
+                    We recommend that you wear sunscreen,
+                    sunscreen clothing and sunglasses before going out.
+                    Besides, you'd better take an umbrella in case the ultraviolet rays are too strong.
+                </p>
+            </div>
+        </div>
+        <div class="card" style="margin-left: 70px;">
+            <div class="rightNewsBox">
+                <div class="newsTitle"> News</div>
+                <div class="banner">
+                    <ul class="imagBox">
+                        <li><img src="~/Assets/img/Body/bodybanner3.png" alt=""></li>
+                    </ul>
+                    <ol>
+                        <li class="active">
+                        <li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                    <!-- <div class="leftSwitch">&lt;</div>
+                    <div class="rightSwitch">&gt;</div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="Information">
+            <div class="Information_1">
+                <span>Solutions</span>
+                <div class="leftBox">
+                    <img class="left" src="~/Assets/img/Footer/footerpic1.png" alt="">
+                    <img class="right" src="~/Assets/img/Footer/footerpic2.png" alt="">
+                </div>
+            </div>
+            <div class="Information_2">
+                <span>Weather</span>
+                <div class="rightBox">
+                    <img src="~/Assets/img/Footer/footer03.png" alt="">
+                    <img src="~/Assets/img/Footer/footer04.png" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
 </div>
