@@ -1,0 +1,43 @@
+﻿@model SunGuard.Models.Solution
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Solution</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SolutionDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SolutionDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UVMin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UVMin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UVMax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UVMax)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

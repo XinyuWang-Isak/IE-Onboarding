@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -45,10 +46,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -156,45 +165,93 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SolutionsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Solution.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Database1.mdf" />
+    <Content Include="App_Data\Database1_log.ldf">
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
     <Content Include="Areas\HelpPage\HelpPage.css" />
-    <Content Include="Assets\img\Body\bodybanner1.png" />
-    <Content Include="Assets\img\Body\bodybanner2.png" />
-    <Content Include="Assets\img\Body\bodybanner3.png" />
-    <Content Include="Assets\img\Body\bodyrightpic1.png" />
-    <Content Include="Assets\img\Body\bodyrightpic2.png" />
-    <Content Include="Assets\img\Body\bodyrightpic3.png" />
-    <Content Include="Assets\img\Body\bodyrightpic4.png" />
-    <Content Include="Assets\img\Body\bodyrightpic5.png" />
-    <Content Include="Assets\img\Body\bodyrightpic6.png" />
-    <Content Include="Assets\img\Body\bodyrightpic7.png" />
-    <Content Include="Assets\img\Footer\footer03.png" />
-    <Content Include="Assets\img\Footer\footer04.png" />
-    <Content Include="Assets\img\Footer\footerpic1.png" />
-    <Content Include="Assets\img\Footer\footerpic2.png" />
-    <Content Include="Assets\img\Header\Foto_icon.png" />
-    <Content Include="Assets\img\Header\level_icon.png" />
-    <Content Include="Assets\img\Header\Location_icon.png" />
-    <Content Include="Assets\img\Header\Secondary _ Calendar.png" />
-    <Content Include="Assets\img\Header\Secondary _ Notification.png" />
-    <Content Include="Assets\img\Header\Secondary _ Settings.png" />
-    <Content Include="Assets\img\Header\Sun cloud angled rain.png" />
-    <Content Include="Assets\img\Header\sun_header.png" />
-    <Content Include="Assets\img\Header\sun_icon.png" />
+    <Content Include="Assets\img\home\A1.png" />
+    <Content Include="Assets\img\home\A2.png" />
+    <Content Include="Assets\img\home\bgp1.png" />
+    <Content Include="Assets\img\home\bgp2.png" />
+    <Content Include="Assets\img\home\footer.png" />
+    <Content Include="Assets\img\home\home_child.mp4" />
+    <Content Include="Assets\img\home\Home_video_2.mp4" />
+    <Content Include="Assets\img\home\img_1.png" />
+    <Content Include="Assets\img\home\level_icon.png" />
+    <Content Include="Assets\img\home\Location_icon.png" />
+    <Content Include="Assets\img\home\logo.png" />
+    <Content Include="Assets\img\home\logo_1.png" />
+    <Content Include="Assets\img\home\logo_2.png" />
+    <Content Include="Assets\img\home\pie_pic.png" />
+    <Content Include="Assets\img\home\S1.png" />
+    <Content Include="Assets\img\home\S10.png" />
+    <Content Include="Assets\img\home\S11.png" />
+    <Content Include="Assets\img\home\S12.png" />
+    <Content Include="Assets\img\home\S13.png" />
+    <Content Include="Assets\img\home\S14.png" />
+    <Content Include="Assets\img\home\S15.png" />
+    <Content Include="Assets\img\home\S2.png" />
+    <Content Include="Assets\img\home\S3.png" />
+    <Content Include="Assets\img\home\S4.png" />
+    <Content Include="Assets\img\home\S5.png" />
+    <Content Include="Assets\img\home\S6.png" />
+    <Content Include="Assets\img\home\S7.png" />
+    <Content Include="Assets\img\home\S8.png" />
+    <Content Include="Assets\img\home\S9.png" />
+    <Content Include="Assets\img\home\Secondary _ Calendar.png" />
+    <Content Include="Assets\img\home\Sun cloud angled rain.png" />
+    <Content Include="Content\about_us.css" />
+    <Content Include="Content\animate.css" />
+    <Content Include="Content\animate.min.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\homepage.css" />
+    <Content Include="Content\knowledge.css" />
+    <Content Include="Content\skin_cancer.css" />
     <Content Include="Content\UV_Home_Page.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Models\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Model1.edmx.sql" />
+    <Content Include="Models\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
@@ -216,14 +273,27 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
-    <Content Include="Assets\img\Body\.DS_Store" />
-    <Content Include="Assets\img\Footer\.DS_Store" />
+    <EntityDeploy Include="Models\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Assets\img\home\.DS_Store" />
+    <Content Include="fonts\Dosis-VariableFont_wght.ttf" />
+    <Content Include="fonts\OleoScriptSwashCaps-Bold.ttf" />
+    <Content Include="fonts\OleoScriptSwashCaps-Regular.ttf" />
+    <Content Include="fonts\VarelaRound-Regular.ttf" />
+    <None Include="Properties\PublishProfiles\SunGuard20220809102436 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\wow.min.js" />
+    <None Include="Views\Home\Knowledge.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -238,10 +308,14 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Solutions\Create.cshtml" />
+    <Content Include="Views\Solutions\Delete.cshtml" />
+    <Content Include="Views\Solutions\Details.cshtml" />
+    <Content Include="Views\Solutions\Edit.cshtml" />
+    <Content Include="Views\Solutions\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -305,7 +379,10 @@
       <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
   </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

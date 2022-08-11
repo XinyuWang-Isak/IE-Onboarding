@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="Model1Container-Web.config Connection String" description="Model1Container Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.Model1.csdl|res://*/Models.Model1.ssdl|res://*/Models.Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=(LocalDB)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\Database1.mdf;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Ge\\source\\repos\\IE-Onboarding\\SunGuard\\SunGuard\\SunGuard\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Model1Container']/@connectionString" />
+  </parameter>
+  <parameter name="Database1Entities-Web.config Connection String" description="Database1Entities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.Solution.csdl|res://*/Models.Solution.ssdl|res://*/Models.Solution.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=(LocalDB)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\Database1.mdf;integrated security=True;multipleactiveresultsets=True;application name=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Ge\\source\\repos\\IE-Onboarding\\SunGuard\\SunGuard\\SunGuard\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Database1Entities']/@connectionString" />
+  </parameter>
+</parameters>

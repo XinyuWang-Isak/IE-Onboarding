@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+@font-face {
+    font-family: cute;
+    src: url(/Code_2.0/Assets/font/VarelaRound-Regular.ttf);
+}
+
+body{
+    background: linear-gradient(to left,lightgreen,lightcyan);
+}
+
+header{
+    /* background-color: transparent; */
+    font-size: 36px;
+    height: 150px;
+    font-family: cute, Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    /* position: fixed; */
+    width: 100%;
+    background: green;
+    animation: identifier 1.5s linear;
+}
+
+header h1{
+    float: left;
+    top: 20px;
+    left: 50px;
+    position: absolute;
+}
+
+header img{
+    width: 150px;
+    height: 130px;
+    transition: all 1.5s;
+}
+
+header img:hover{
+    transform: scale(1.2);
+}
+
+.menu-main-container{
+    float: right;
+    height: 53px;
+    line-height: 53px;
+    top:50px;
+    right: 100px;
+    position: absolute;
+}
+
+.menu-main-container li{
+    float: left;
+    margin-right: 50px;
+}
+
+.active:link{
+    background-color: transparent;
+    color:  white;
+    text-decoration: none;
+}
+
+.active:visited{    
+    background-color: transparent;
+    color:  whitesmoke;
+    text-decoration: none;
+}
+
+.nav a:hover{
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.active{
+    transition: all 0.2s;
+}
+
+.active:hover{
+    color:lightcyan;
+    border-bottom: 5px solid yellow;
+    border-radius: 4px;
+    transform: scale(1.2);
+}
+
+/* .nav .home-link{
+    color:darkslateblue;
+    border-bottom: 5px solid yellow;
+    border-radius: 4px;
+} */
+
+/* submenu */
+.menu-main-container .submenu{
+    /* float: left; */
+    width: 350px;
+    text-align: center;
+    background: transparent;
+    color: white;
+    /* line-height: 40px; */
+}
+
+.submenu ul{
+    display: none;
+    background: transparent;
+    color: white;
+}
+
+.submenu li{
+    width: 350px;
+    text-align: center;
+}
+
+.effect_nav{
+    margin-right: 45px;
+}
+/* .submenu:hover{
+    border: 0px 5px 5px 5px solid white;
+    border-radius: 5px;  
+} */
+
+.submenu:hover ul{
+    display: block;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+}
+.submenu li>a:link{
+    background-color: transparent;
+    color:  darkslateblue;
+    text-decoration: none;
+}
+
+.submenu li>a:visited{
+    background-color: transparent;
+    color:  yellow;
+    text-decoration: none;
+}
+
+.submenu li:hover{
+    color: darkslateblue;
+    background-color: antiquewhite;
+    border-radius: 20px;
+    border: 0;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+    font-size: 0;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+/* Style the list */
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #eee;
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: ">\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+
+.text{
+    width:1141px;
+    height:644px;
+    top:295px;
+    left:105px;
+}
+
+.text h2{
+    color: #0CB04A;
+}
+
+.text p{
+    color: #2F257B;
+}

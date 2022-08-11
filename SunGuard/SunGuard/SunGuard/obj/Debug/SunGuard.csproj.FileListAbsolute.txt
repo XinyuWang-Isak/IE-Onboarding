@@ -93,3 +93,7 @@ C:\Users\Ge\source\repos\IE-Onboarding\SunGuard\SunGuard\SunGuard\obj\Debug\SunG
 C:\Users\Ge\source\repos\IE-Onboarding\SunGuard\SunGuard\SunGuard\obj\Debug\SunGuard.csproj.CopyComplete
 C:\Users\Ge\source\repos\IE-Onboarding\SunGuard\SunGuard\SunGuard\obj\Debug\SunGuard.dll
 C:\Users\Ge\source\repos\IE-Onboarding\SunGuard\SunGuard\SunGuard\obj\Debug\SunGuard.pdb
+C:\Users\Ge\source\repos\IE-Onboarding\SunGuard\SunGuard\SunGuard\bin\EntityFramework.dll
+C:\Users\Ge\source\repos\IE-Onboarding\SunGuard\SunGuard\SunGuard\bin\EntityFramework.xml
+C:\Users\Ge\source\repos\IE-Onboarding\SunGuard\SunGuard\SunGuard\bin\EntityFramework.SqlServer.dll
+C:\Users\Ge\source\repos\IE-Onboarding\SunGuard\SunGuard\SunGuard\bin\EntityFramework.SqlServer.xml
